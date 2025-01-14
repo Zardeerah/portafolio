@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Archivos de configuración de editor/IDE
+.vscode/
+.idea/
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos generados por Vue.js y herramientas de compilación
+dist/
+build/
+
+# Archivos de dependencias de npm
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Archivos de caché
+.cache/
+
+# Archivos de configuración del entorno
+.env
+.env.local
+.env.*.local
+
+# Otros archivos temporales o logs
+*.log
+*.bak
+*.tmp

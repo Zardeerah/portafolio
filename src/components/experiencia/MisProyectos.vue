@@ -9,7 +9,7 @@
             <div
                 class="flex flex-col items-center space-y-2 bg-blue-100 rounded-md p-3 shadow-sm hover:bg-blue-200 transition-colors">
                 <div class="group relative">
-                    <img src="@/assets/img/proyecto1.png" alt="">
+
                 </div>
             </div>
         </div>
