@@ -4,6 +4,7 @@ import App from "/src/App.vue";
 import store from "/src/store/index.js";
 
 import router from "/src/router/index.js";
+import "./assets/scss/main.scss";
 
 import vuetify from "/src/components/plugins/vuetify.js";
 

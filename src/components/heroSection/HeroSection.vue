@@ -21,7 +21,7 @@ h1 {
     color: rgb(46, 1, 66);
     font-size: 30px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 400px;
     font-family: "Aldrich", serif;
     transform: scale(1.5);
     font-weight: 300;

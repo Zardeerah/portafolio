@@ -13,7 +13,7 @@
                 <MisSkill />
             </div>
             <!-- Training -->
-            <div class="flex justify-center w-full sm:w-auto">
+            <div>
                 <MisTradding />
             </div>
         </section>

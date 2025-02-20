@@ -15,11 +15,9 @@
             oportunidades y crear un impacto significativo en el equipo y la organización.
         </span>
 
-    </div>
-    <p class=" items-center justify-center">
+        <!-- El componente Contact ya no está dentro de un p -->
         <Contact />
-
-    </p>
+    </div>
 </template>
 
 <script>
@@ -30,53 +28,61 @@ export default {
 
 <style scoped>
 .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+    justify-content: flex-start;
     min-height: 100vh;
-    /* Ocupa toda la pantalla */
-    box-sizing: border-box;
-
+    gap: 20px;
 }
 
 img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+    height: 300px;
+    display: block;
     margin-bottom: 20px;
-    /* Espaciado debajo de la imagen */
 }
 
 h1 {
     color: rgb(46, 1, 66);
     font-size: 30px;
-    margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(192, 42, 42, 0.3);
     font-family: "Aldrich", serif;
     transform: scale(1.2);
-
 }
 
 span {
     font-size: 18px;
-    font-weight: normal;
     line-height: 1.6;
-    /* Mejora la legibilidad */
     color: rgb(68, 100, 68);
-    /* Contraste adecuado */
     max-width: 800px;
-    /* Limitar el ancho del texto */
     text-align: justify;
-    /* Alinear el texto para mejor lectura */
-    border-radius: 50px;
+    border-radius: 20px;
     font-family: "Aldrich", serif;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    span {
+        font-size: 14px;
+        text-align: left;
+    }
 }
 </style>
 
 <script setup>
 import Contact from '../about/Contact.vue';
-
 </script>

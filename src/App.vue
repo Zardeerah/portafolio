@@ -14,5 +14,3 @@ import homeView from './components/header/homeView.vue'
     </div>
   </div>
 </template>
-
-<style scoped></style>
