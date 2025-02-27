@@ -27,3 +27,5 @@ npm run dev
 ```sh
 npm run build
 ```
+### link 
+https://portafolio-delta-smoky.vercel.app/
