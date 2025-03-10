@@ -1,13 +1,13 @@
 <template>
-    <div
-        class="flex flex-col items-center justify-center px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <!-- Contenido del componente -->
-        <h1>Paola Stuardo Viveros</h1>
-        <p> Desarrolladora front-end</p>
+    <!-- Contenedor principal -->
+    <div class="container text-center py-5">
+        <!-- Nombre y Rol -->
+        <h1 class="display-4">Paola Stuardo Viveros</h1>
+        <p class="lead">Desarrolladora front-end</p>
     </div>
 
-    <!-- Asegura que el contenedor de Contact también esté alineado al centro -->
-    <div class="flex items-center justify-center">
+    <!-- Contenedor de Contact -->
+    <div class="d-flex justify-content-center">
         <Contact />
     </div>
 </template>
@@ -20,22 +20,17 @@ import Contact from '../about/Contact.vue';
 h1 {
     color: rgb(46, 1, 66);
     font-size: 30px;
-    text-align: center;
-    margin-top: 400px;
     font-family: "Aldrich", serif;
     transform: scale(1.5);
     font-weight: 300;
+    margin-top: 200px;
 }
 
 p {
     color: rgb(46, 1, 66);
     font-size: 40px;
-    text-align: center;
-    margin-top: 20px;
     font-weight: 400;
-    font-family: 'cascadia code', monospace;
+    font-family: 'Cascadia Code', monospace;
     margin-bottom: 10px;
-
-
 }
 </style>

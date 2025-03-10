@@ -14,16 +14,12 @@
             lista para aportar valor y soluciones creativas en cada proyecto. Estoy aquí para transformar desafíos en
             oportunidades y crear un impacto significativo en el equipo y la organización.
         </span>
-
-        <!-- El componente Contact ya no está dentro de un p -->
         <Contact />
     </div>
 </template>
 
-<script>
-export default {
-    name: "PerfilPaola",
-};
+<script setup>
+import Contact from '../about/Contact.vue';
 </script>
 
 <style scoped>
@@ -39,12 +35,19 @@ export default {
     justify-content: flex-start;
     min-height: 100vh;
     gap: 20px;
+    overflow-y: hidden;
+    /* Permite desplazamiento solo en el eje Y */
+    overflow-x: hidden;
+    /* Evita desplazamiento en el eje X */
+    max-height: 100vh;
+    /* Limita la altura del contenedor */
 }
 
 img {
     border-radius: 50%;
     max-width: 100%;
-    height: 300px;
+    height: 250px;
+    /* Ajustado el tamaño de la imagen */
     display: block;
     margin-bottom: 20px;
 }
@@ -65,6 +68,8 @@ span {
     text-align: justify;
     border-radius: 20px;
     font-family: "Aldrich", serif;
+    overflow-wrap: break-word;
+    /* Para evitar desbordamiento de palabras largas */
 }
 
 @media (max-width: 768px) {
@@ -80,9 +85,10 @@ span {
         font-size: 14px;
         text-align: left;
     }
+
+    img {
+        height: 200px;
+        /* Reducir el tamaño de la imagen en pantallas más pequeñas */
+    }
 }
 </style>
-
-<script setup>
-import Contact from '../about/Contact.vue';
-</script>

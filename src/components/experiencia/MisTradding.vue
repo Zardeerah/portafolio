@@ -4,11 +4,11 @@
             Formación
         </span>
         <ul class="space-y-2 text-gray-700">
-            <li class="bg-blue-100 text-blue-800 rounded-md p-3 shadow-sm hover:bg-blue-200 transition-colors">
-                Desarrollo de aplicaciones Front End, Desafio Latam
+            <li class="desarrollo">
+                Desarrollo de aplicaciones Front End, Desafio Latam.
             </li>
-            <li class="bg-blue-100 text-blue-800 rounded-md p-3 shadow-sm hover:bg-blue-200 transition-colors">
-                Analisis de Datos, Coursera
+            <li class="analissis">
+                Analisis de Datos, Coursera.
             </li>
         </ul>
     </div>
@@ -21,6 +21,7 @@
     align-items: center;
     gap: 10px;
     margin-top: 0px;
+
 }
 
 .titulo {
@@ -46,5 +47,49 @@ ul {
 
 li {
     list-style-type: none;
+    color: #0d6efd;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.desarrollo {
+    color: rgb(46, 1, 66);
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(192, 42, 42, 0.3);
+    font-family: "Aldrich", serif;
+    transform: scale(1.2);
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    display: block;
+    /* Asegura que el elemento ocupe todo el ancho */
+    margin-top: 10px;
+    background-color: rgb(248, 224, 236);
+    border-radius: 10px;
+}
+
+.desarrollo:hover {
+    transform: scale(1.1);
+
+
+
+}
+
+
+
+.analissis {
+    color: rgb(46, 1, 66);
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(192, 42, 42, 0.3);
+    font-family: "Aldrich", serif;
+    transform: scale(1.2);
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    display: block;
+    /* Asegura que el elemento ocupe todo el ancho */
+    margin-top: 10px;
+    background-color: rgb(248, 224, 236);
 }
 </style>

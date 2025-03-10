@@ -18,31 +18,27 @@
     </div>
 </template>
 
+<script setup>
+import { computed } from "vue";
 
+const skills = [
+    { name: "HTML", icon: "fa-brands fa-html5", color: "#ff571f" },
+    { name: "CSS", icon: "fa-brands fa-css3-alt", color: "#306AF1" },
+    { name: "Sass", icon: "fa-brands fa-sass", color: "#CF6B9D" },
+    { name: "Bootstrap", icon: "fa-brands fa-bootstrap", color: "#8F1AFF" },
+    { name: "Git", icon: "fa-brands fa-git-alt", color: "#E84D31" },
+    { name: "JavaScript", icon: "fa-brands fa-square-js", color: "#E8D44D" },
+    { name: "Vue", icon: "fa-brands fa-vuejs", color: "#3FB27F" },
+];
 
-<script>
-export default {
-    name: "MisSkill",
-    setup() {
-        const skills = [
-            { name: "HTML", icon: "fa-brands fa-html5", color: "#ff571f" },
-            { name: "CSS", icon: "fa-brands fa-css3-alt", color: "#306AF1" },
-            { name: "Sass", icon: "fa-brands fa-sass", color: "#CF6B9D" },
-            { name: "Bootstrap", icon: "fa-brands fa-bootstrap", color: "#8F1AFF" },
-            { name: "Git", icon: "fa-brands fa-git-alt", color: "#E84D31" },
-            { name: "JavaScript", icon: "fa-brands fa-square-js", color: "#E8D44D" },
-            { name: "Vue", icon: "fa-brands fa-vuejs", color: "#3FB27F" },
-        ];
-
-        // Dividir las habilidades en filas de 5 elementos
-        const skillRows = [];
-        for (let i = 0; i < skills.length; i += 4) {
-            skillRows.push(skills.slice(i, i + 4));
-        }
-
-        return { skillRows };
-    },
-};
+// Divide las habilidades en filas de 4 elementos
+const skillRows = computed(() => {
+    const rows = [];
+    for (let i = 0; i < skills.length; i += 4) {
+        rows.push(skills.slice(i, i + 4));
+    }
+    return rows;
+});
 </script>
 
 <style scoped>
@@ -50,8 +46,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: rgb(248, 224, 236);
+    border-radius: 20px;
 }
 
 .titulo {
@@ -61,7 +62,6 @@ export default {
     text-shadow: 2px 2px 5px rgba(192, 42, 42, 0.3);
     font-family: "Aldrich", serif;
     transform: scale(1.2);
-
 }
 
 /* Contenedor de filas */
@@ -70,15 +70,22 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    /* Espaciado entre filas */
+    padding: 10px;
+    /* Reemplazo de margin-left */
+    max-width: 100%;
+    /* Evita desbordamientos */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .fila-iconos {
     display: flex;
+    flex-wrap: wrap;
+    /* Permite que los iconos bajen si no caben */
     justify-content: center;
-    /* Centrar elementos horizontalmente */
-    gap: 20px;
+    gap: 15px;
     /* Espaciado entre los iconos */
+    max-width: 100%;
 }
 
 .iconos {
@@ -87,28 +94,33 @@ export default {
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    gap: 15px;
+    gap: 10px;
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(46, 1, 66);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
     transition: transform 0.3s, background 0.3s ease-in-out;
-    /* Ajuste opcional adicional */
+    flex-wrap: wrap;
+    /* Permite que el texto y el icono se acomoden */
+    max-width: 100%;
+
 }
 
 .iconos i {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    /* Reducido un poco para evitar desbordamiento */
+    overflow: hidden;
 }
 
 .iconos span {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #ffffff;
 }
 
 .iconos:hover {
-    transform: scale(1.2);
-    filter: brightness(1.6);
+    transform: scale(1.1);
+    filter: brightness(1.4);
+    overflow: hidden;
 }
 
 .iconos:hover span {

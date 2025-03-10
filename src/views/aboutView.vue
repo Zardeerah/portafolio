@@ -6,6 +6,4 @@
 import AboutMe from '../components/about/AboutMe.vue'
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

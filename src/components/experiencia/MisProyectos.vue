@@ -44,6 +44,27 @@
 </template>
 
 <style scoped>
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0px;
+    margin-bottom: 0%;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: rgb(248, 224, 236);
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
 .titulo {
     color: rgb(46, 1, 66);
     font-size: 30px;
@@ -51,11 +72,12 @@
     text-shadow: 2px 2px 5px rgba(192, 42, 42, 0.3);
     font-family: "Aldrich", serif;
     transform: scale(1.2);
-
+    margin-top: auto;
 }
 
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgb(248, 224, 236);
 }
 
 .card:hover {
@@ -79,6 +101,7 @@
 .card-body a:hover {
     color: #0d6efd;
     /* Azul de Bootstrap */
+
 }
 
 /* Estilos para que las imágenes sean del mismo tamaño */
@@ -89,5 +112,37 @@
     /* Tamaño fijo para todas las imágenes */
     object-fit: cover;
     /* Recorta la imagen sin deformarla */
+}
+
+/* Media queries para adaptar el diseño a teléfonos */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 24px;
+        /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .card-body a {
+        font-size: 1rem;
+        /* Ajusta el tamaño de la fuente en enlaces */
+    }
+
+    /* Ajustar las tarjetas en una sola columna */
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        /* Las tarjetas ocupan el 100% del ancho */
+        margin-bottom: 15px;
+        /* Espacio entre las tarjetas */
+    }
+
+    .card-img-top {
+        height: 150px;
+        /* Reduce el tamaño de las imágenes para pantallas pequeñas */
+    }
 }
 </style>

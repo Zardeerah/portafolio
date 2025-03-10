@@ -1,75 +1,87 @@
 <template>
     <!-- Contenedor principal -->
-    <div class="container flex flex-col items-center mt-10 space-y-4">
+    <div class="container mt-3 text-center">
         <!-- Sección de Proyectos -->
-        <div class="w-full sm:w-auto flex justify-center">
-            <MisProyectos />
+        <div class=" mis proyectos row justify-content-center mb-4">
+            <div class="col-12 col-md-8">
+                <MisProyectos />
+            </div>
         </div>
 
         <!-- Sección para Skills y Training -->
-        <section class="flex flex-col sm:flex-row w-full sm:justify-center sm:space-x-8 space-y-4 sm:space-y-0">
+        <div class="row justify-content-center align-items-start mb-4">
+
             <!-- Skills -->
-            <div class="flex justify-center w-full sm:w-auto">
-                <MisSkill />
+            <div class="skill col-12 col-md-5">
+                <div class="p-4 border rounded custom-bg shadow-sm">
+                    <MisSkill />
+                </div>
             </div>
             <!-- Training -->
-            <div>
-                <MisTradding />
+            <div class="col-12 col-md-5">
+                <div class="p-4 border rounded custom-bg shadow-sm">
+                    <MisTradding />
+                </div>
             </div>
-        </section>
+        </div>
     </div>
 </template>
 
 <script setup>
+
 import MisSkill from "@/components/experiencia/MisSkill.vue";
 import MisProyectos from "@/components/experiencia/MisProyectos.vue";
 import MisTradding from "@/components/experiencia/MisTradding.vue";
 </script>
 
+
 <style scoped>
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Estilo para la sección de Skills y Training */
-section {
-    display: flex;
-    justify-content: center;
-    /* Centra horizontalmente los elementos */
-    gap: 100px;
-    /* Espaciado entre Skills y Training */
-    width: 100%;
-    /* Asegura que ocupe todo el ancho del contenedor */
-}
-
-/* Estilo para MisSkill y MisTradding */
-.iconos,
-.trading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.custom-bg {
+    background-color: rgb(247, 235, 241);
     padding: 20px;
     border-radius: 10px;
-    background-color: #f5f5f5;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 300px;
-    /* Ancho máximo uniforme */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: 100%;
 }
 
-.iconos {
-    background-color: #e8f5e9;
-    /* Verde claro */
+.row {
+    margin-bottom: 20px;
+
 }
 
-.trading {
-    background-color: #e3f2fd;
-    /* Azul claro */
+.col-12 {
+    margin-bottom: 20px;
+
+}
+
+.skill {
+
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(247, 235, 241);
+}
+
+.mis {
+
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(247, 235, 241);
+    overflow: hidden;
+    max-height: 100%;
+
+}
+
+/* Ajusta la alineación de los elementos en dispositivos más pequeños */
+@media (max-width: 768px) {
+    .col-12 {
+        margin-bottom: 20px;
+    }
 }
 </style>
