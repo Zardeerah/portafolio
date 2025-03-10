@@ -35,8 +35,11 @@ p {
 }
 
 @media (max-width: 768px) {
-    .col-12 {
-        margin-bottom: 20px;
+    h1 {
+        transform: scale(1);
+        /* Evita que sea demasiado grande en móviles */
+        margin-top: 10vh;
+        /* Reduce el margen */
     }
 }
 </style>
