@@ -33,4 +33,10 @@ p {
     font-family: 'Cascadia Code', monospace;
     margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+    .col-12 {
+        margin-bottom: 20px;
+    }
+}
 </style>
