@@ -18,7 +18,7 @@
                 </div>
             </div>
             <!-- Training -->
-            <div class="col-12 col-md-5">
+            <div class="training col-12 col-md-5">
                 <div class="p-4 border rounded custom-bg shadow-sm">
                     <MisTradding />
                 </div>
@@ -44,9 +44,9 @@ import MisTradding from "@/components/experiencia/MisTradding.vue";
 
 .custom-bg {
     background-color: rgb(247, 235, 241);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+
     overflow: hidden;
     max-height: 100%;
 }
@@ -58,15 +58,11 @@ import MisTradding from "@/components/experiencia/MisTradding.vue";
 
 .col-12 {
     margin-bottom: 20px;
-
-}
-
-.skill {
-
-    padding: 20px;
     border-radius: 20px;
-    background-color: rgb(247, 235, 241);
+
 }
+
+
 
 .mis {
 
@@ -77,6 +73,14 @@ import MisTradding from "@/components/experiencia/MisTradding.vue";
     max-height: 100%;
 
 }
+
+.skill .custom-bg,
+.training .custom-bg {
+    border-radius: 20px !important;
+}
+
+
+
 
 /* Ajusta la alineación de los elementos en dispositivos más pequeños */
 @media (max-width: 768px) {

@@ -74,7 +74,7 @@ const skillRows = computed(() => {
     /* Reemplazo de margin-left */
     max-width: 100%;
     /* Evita desbordamientos */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
 
 }
 
@@ -98,7 +98,7 @@ const skillRows = computed(() => {
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(46, 1, 66);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
     transition: transform 0.3s, background 0.3s ease-in-out;
     flex-wrap: wrap;
     /* Permite que el texto y el icono se acomoden */

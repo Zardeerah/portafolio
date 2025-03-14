@@ -92,4 +92,8 @@ li {
     margin-top: 10px;
     background-color: rgb(248, 224, 236);
 }
+
+.analissis:hover {
+    transform: scale(1.1);
+}
 </style>
