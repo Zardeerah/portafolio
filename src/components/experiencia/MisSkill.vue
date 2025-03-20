@@ -51,7 +51,7 @@ const skillRows = computed(() => {
     margin-top: 0px;
     overflow: hidden;
     max-width: 100%;
-    background-color: rgb(248, 224, 236);
+    background-color: rgb(247, 235, 241);
     border-radius: 20px;
 }
 
@@ -70,10 +70,12 @@ const skillRows = computed(() => {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 10px;
+    padding: 40px;
     /* Reemplazo de margin-left */
     max-width: 100%;
     /* Evita desbordamientos */
+    background-color: rgb(248, 224, 236);
+    border-radius: 20px;
 
 
 }
